@@ -1,4 +1,6 @@
 line_width = 55
+title = 'Table of Contents'.center(50)
+puts title
 Chapter1 ='Chapter 1:  Getting Started'
 page1 = 'page  1'
 puts (Chapter1.ljust( line_width/2.1) + page1.rjust(line_width/2.1))

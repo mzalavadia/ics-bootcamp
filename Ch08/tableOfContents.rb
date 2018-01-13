@@ -1,6 +1,15 @@
-toc = ['Table of Contents', 'Chapter 1: Getting Started', 'page  1', 'Chapter 2: Numbers', 'page  9', 'Chapter3: Letters', 'page 13' ]
-page_width= 60
-puts (toc[0].center(page_width))
-puts (toc[1].ljust(page_width/2) + toc[2].rjust(page_width/2))
-puts (toc[3].ljust(page_width/2) + toc[4].rjust(page_width/2))
-puts (toc[5].ljust(page_width/2) + toc[6].rjust(page_width/2))
+title = 'Table of Contents'
+chapters= [['Getting Started', 1],
+          ['Numbers',          9],
+          ['Letters',         13]]
+puts title.center(50)
+puts
+chap_num = 1
+chapters.each do |chap|
+  name = chap[0]
+  page = chap[1]
+  beginning= 'Chapter' + chap_num.to_s + ':  ' + name
+  ending= 'page ' + page.to_s
+puts beginning.ljust(30) + ending.rjust(20)
+chap_num = chap_num + 1
+end
